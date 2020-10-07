@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--[IE Compatibility meta]-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--[meta for mobile]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+    <meta name="description" content="description of content of the site">
+    <title>153news</title>
+        <!--[normalize file exists in bootstrap file]
+        <link rel="stylesheet" href="../css/normalize.css">
+-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <!--[if it's IE]-->
+    </head>
+    <style>
+        .my-macbook {
+            box-sizing: border-box;
+            background: url(imgs/macbook.png) center center no-repeat;
+            background-size: contain;
+            padding: 1.9% 8% 20.8%;
+            /* position: absolute; */
+            top: 0;
+            left: 0;
+            width: 720px;
+            height: 405px;
+            overflow: hidden;
+            position: relative;
+            }
+        .my-video-style {
+            width: 467px;
+            height: 266px;
+            position: absolute;
+            top: 17px;
+            left: 125px;
+        }
+    </style>
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <body>
+        <div class="my-macbook col-xs-offset-3">
+            <div class="my-video-style">
+                <video 
+                        id="my-video"
+                        class="video-js vjs-big-play-centered"
+                        preload="auto"
+                        width="467"
+                        height="266"
+                        poster="MY_VIDEO_POSTER.jpg"
+                        data-setup="{}">
+                    <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                >supports HTML5 video</a
+              >
+            </p>
+
+                </video>    
+            </div>
+        </div>
+<script>
+    var carousel = $("#carousel").flipster({
+        style: 'carousel',
+        spacing: 1,
+        nav: true,
+        buttons:   true,
+    });
+</script>
+        <!--End Footer-->
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script type="js/jquery.flipster.js"></script>
+        <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+        <script src="https://cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+        <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+        <script src="js/main.js"></script>
+        
+
+        <script>
+            var player = videojs('my-video', {
+                autoplay: 'muted',
+                controls: true,
+                poster: 'imgs/2.jpeg',
+                loop: true,
+                playbackRates: [0.25, 0.5, 1, 1.25, 1.5, 1.75, 2, 2.5, 3],
+                plugins: {
+                    hotkeys: {
+                        
+                    }
+                }
+                
+
+            })
+            player.src([
+   {
+      src: 'imgs/Fitpolo H709 Smart Bracelet.mp4',
+      type: 'video/mp4',
+      label: '720P',
+   },
+   {
+      src: 'imgs/Fitpolo H709 Smart Bracelet.mp4',
+      type: 'video/mp4',
+      label: '480P',
+      selected: true,
+   },
+   {
+      src: 'imgs/Fitpolo H709 Smart Bracelet.mp4',
+      type: 'video/mp4',
+      label: '360P',
+   },
+]);
+            player.controlBar.addChild('QualitySelector');
+        var options = {
+   controlBar: {
+      children: [
+         'playToggle',
+         'progressControl',
+         'volumePanel',
+         'qualitySelector',
+         'fullscreenToggle',
+      ],
+   },
+};
+
+player = videojs('my-video', options);
+
+            var videojs = require('videojs');
+ 
+// The following registers the plugin with `videojs`
+require('@silvermine/videojs-quality-selector')(videojs);
+ 
+// The following registers the plugin with `videojs`
+require('@silvermine/videojs-quality-selector')(videojs);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+/*Smart Phones & Tablets*/
+@media(max-width: 767px) {
+    .homeland {
+        height: 140px;
+    }
+    .homeland .col-xs-2 {
+        display: none;
+    }
+    .homeland .col-xs-10 {
+        width: 100%;
+    }
+    .homeland .carousel-caption {
+    color: #960c85;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 40px;
+    font-family: serif;
+    z-index: 10;
+}
+    .homeland .carousel-caption .head {
+        font-size: 30px;
+    }
+    .navbar-brand {
+        display: block;
+    }
+    #main {
+        left:0px;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .player {
+        margin-left: 0;
+        width: 100%;
+    }
+    .player-header {
+    padding-left: 0px;
+}
+    .myslider .slider-table {
+        width: 100%;
+    }
+    .swipper-slide {
+        width: 100%;
+    }
+    .myslider .reclane {
+        margin-top: 12px;
+        margin-left: 10.333%;
+        width: 84%;
+    }
+.myslider .myreclane {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 10px;
+}
+    .footer-banner {
+        width: 100%;
+    }
+    .copyright {
+        font-size: 7px;
+    }
+}
+/*Small Screen*/
+@media(min-width: 768px) and (max-width: 991px) {
+  
+    
+}
+/*Medium Screen*/
+@media(min-width: 992px) and (max-width: 1199px) {
+    
+
+}
+/*Large Screen*/
+@media(min-width: 1200px) {
+    
+
+}
